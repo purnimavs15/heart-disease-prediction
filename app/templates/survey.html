@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fceab0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .content {
+            max-width: 600px;
+            width: 100%;
+            background-color: #fdd282;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .image-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .image-list li {
+            margin: 10px 0;
+            cursor: pointer;
+            color: #007bff;
+        }
+        .image-list li:hover {
+            color: #0056b3;
+        }
+        #graphDisplay {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #graphDisplay img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="content">
+        <h2>Survey: Feature Relationships</h2>
+        <ul class="image-list">
+            <li onclick="showGraph('Age.png')">Age v/s Heart-disease</li>
+            <li onclick="showGraph('chestpain.png')">Chestpain v/s Heart-disease</li>
+            <li onclick="showGraph('fasting.png')">Sugar level v/s Heart-disease</li>
+            <li onclick="showGraph('sex.png')">Sex v/s Heart-disease</li>
+            <li onclick="showGraph('Thalassemia.png')">Thalassemia v/s Heart-disease</li>
+            <li onclick="showGraph('cholestoral.png')">Cholesterol v/s Heart-disease</li>
+        </ul>
+        <div id="graphDisplay">
+            <img id="graphImage" src="" alt="Graph will be displayed here" style="display:none;" />
+        </div>
+    </div>
+    <script src="static/survey.js"></script>
+    <script>
+        function showGraph(imageName) {
+            const imgElement = document.getElementById('graphImage');
+            imgElement.src = `static/img/${imageName}`; // Adjust the path as necessary
+            imgElement.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
