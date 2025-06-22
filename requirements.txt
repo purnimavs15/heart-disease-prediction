@@ -2,4 +2,9 @@ Flask
 joblib
 numpy
 pandas
+<<<<<<< HEAD
 scikit-learn
+=======
+scikit-learn
+chart.js
+>>>>>>> f6a407fcefe2bb3d1d534a62206e87aa2b5c38b6
