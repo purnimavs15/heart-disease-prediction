@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Evaluation</title>
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/check_heart_disease">Check Heart Disease</a></li>
+                <li><a href="/survey">Survey</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h2>Model Evaluation</h2>
+            <h3>Model Accuracy</h3>
+            <p id="accuracy">Accuracy: 88.52%</p> <!-- Replace with actual accuracy -->
+
+            <h3>Correlation Matrix</h3>
+            <canvas id="correlationChart" width="400" height="200"></canvas>
+
+            <h3>Feature Importance</h3>
+            <canvas id="importanceChart" width="400" height="200"></canvas>
+        </div>
+    </div>
+    <script src="static/model.js"></script>
+</body>
+</html>
